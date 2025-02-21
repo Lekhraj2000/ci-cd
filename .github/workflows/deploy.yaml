@@ -22,8 +22,8 @@ jobs:
           port: 22
           passphrase: "Lekhraj@02"
           script: |
-            ls
             cd ci-cd
+            ls
             git pull
             npm install
             npm run build
