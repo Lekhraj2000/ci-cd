@@ -23,8 +23,8 @@ jobs:
           passphrase: "Lekhraj@02"
           script: |
             cd ci-cd
-            ls
             git pull origin main
+            ls
             npm install
             npm run build
             npm run start
