@@ -14,7 +14,8 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
       - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v1.2.1 
+        uses: appleboy/ssh-action@v0.1.10
+
         with:
           host: 52.66.243.186
           username: ubuntu
@@ -25,8 +26,11 @@ jobs:
             cd ci-cd
             git pull origin main
             ls
-            npm install
-            npm run build
-            npm run start
+script: |
+  cd ci-cd
+  git pull origin main
+  /usr/bin/npm install
+  /usr/bin/npm run build
+  /usr/bin/npm run start
 
             
