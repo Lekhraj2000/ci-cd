@@ -24,8 +24,8 @@ jobs:
           port: 22
           passphrase: "Lekhraj@02"
           script: |
-              export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.14.0/bin
               cd ci-cd
+              export  PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.14.0/bin
               git pull origin main
               npm install
               npm run build
